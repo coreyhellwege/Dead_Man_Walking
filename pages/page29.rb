@@ -8,7 +8,7 @@ As you move, you notice that it’s hard to breathe again; and not just because 
 This isn’t good you realize, knowing that too much smoke in a closed place like the tunnels could be just as deadly as the zombies themselves. As you stand there looking up, you hear the din of the ravenous zombie hoard echoing up from the darkness behind you – the damn things are still making their way toward you.
 With little choice, you hurry on ahead, straining to see light down the tunnel that might indicate a fire or other source of the smoke. As you round a bend in the tracks, you see billowing black smoke filling the entire passage ahead. And while you can’t see any light through the smoke, you do hear the roar of a large fire nearby and can feel the heat intensifying the closer you get."""
 
-    a = AsciiArt.new("img/fire.png")
+    a = AsciiArt.new("img/fire.jpg")
         puts a.to_ascii_art(width: 50)
 
     puts"""

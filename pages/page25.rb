@@ -9,7 +9,7 @@ There is an abrupt silence, as all attention is suddenly drawn to you, and then 
 You level the heavy fire extinguisher in front of you and ram at full speed into the first two zombies with a yell – sending them flying back into two more and toppling all four of them. Almost there you think, swinging the heavy fire extinguisher with both hands at the nearest of those left standing. The butt of the extinguisher slams into the creature’s head just below the ear – shattering the thing’s jaw and knocking its head so far to the side that its neck snaps loudly. It falls to the ground twitching violently.
 You still have one standing between you and your goal when you feel grasping hands all over your back. It seems that your initial crash into the zombies has drastically slowed your forward momentum. With horror you feel yourself suddenly being pulled backward into the crowd. The book bag you think! They have hold of your book bag! You drop one shoulder and spin out of the book bag freeing yourself of the hoard on the landing platform, but exposing your back to the one standing between you and the turnstile gate. Knowing that it must be lunging at you even now, you do something radical and drop to the ground before rolling away to the side and emptying the contents of the fire extinguisher at your attackers."""
 
-    a = AsciiArt.new("img/fire_extinguisher.png")
+    a = AsciiArt.new("img/fire_extinguisher.jpg")
         puts a.to_ascii_art(width: 50)
 
     puts """

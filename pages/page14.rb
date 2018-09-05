@@ -6,7 +6,7 @@ module Page14
 Your cinderblock smashed one lunatic’s head in easy enough; it should work on two more just as well. You have time to maneuver to a higher position on the wreckage of the train cars and there wait for the two subway passengers to pass by. That’s when you’ll get the jump on them.\n
 Sure enough, the two moaning subway passengers stumble by, not immediately seeing you from your position of ambush. As you leap down at them, you notice that both already look pretty mangled by the train wreck itself – one even walking on a completely dislocated ankle. Your chunk of cinderblock comes down with you, striking squarely on the top of the first’s head. The monster crumples under the blow immediately as its head explodes in a messy display – along with your chunk of cinderblock – which shatters in a dusty rain of crumbling bits.\n"""
 
-a = AsciiArt.new("img/cinder_block.png")
+a = AsciiArt.new("img/cinder_block.jpg")
 puts a.to_ascii_art(width: 50)
 
 puts """

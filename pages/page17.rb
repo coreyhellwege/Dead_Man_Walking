@@ -14,7 +14,7 @@ puts """
         1. Continue towards the station
 	"
     option = nil
-    until (ption == 0 || option == 1)
+    until (option == 0 || option == 1)
     print ColorizedString["Please enter your choice: "].colorize(:red) 
     option = gets.chomp.to_i
     end

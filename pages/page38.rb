@@ -7,7 +7,7 @@ module Page38
         Looking toward the smaller group of ten to twelve zombies ahead of you at the other end of the corridor, you see that they too have all seen you and are now coming at you as well – lumbering forward with a clumsy gait.
         You arrive at the pile of bloody corpses under the shattered security window and see three zombies inside the security area, amid a toppled collection of broken and dead security monitors. There is also another door to the back of the security room, but it is ajar and you briefly see movement from the other side. More zombies no doubt."""
 
-        a = AsciiArt.new("img/gun.png")
+        a = AsciiArt.new("img/gun.jpg")
         puts a.to_ascii_art(width: 50)
 
         puts"""
