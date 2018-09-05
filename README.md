@@ -2,9 +2,12 @@
 ## :skull: Dead Man Walking :scream_cat: 
 </br>
 
+**Repository:**
+https://github.com/coreyhellwege/dead_man_walking
+
 ### **WHY IT EXISTS:**
 ___
-This app provides a fun alternative to reading a traditional fictional story. If the user is bored with the standard format of a novel, this app allows them to directly interact with the story and choose their own ending.
+This app provides a fun alternative to reading a traditional fictional story. If the user is bored with the standard format of a novel, this app allows them to directly interact with the story and choose their own adventure.
 ### **HOW TO RUN:**
 ___
 Run app using Ruby in your terminal
@@ -17,16 +20,17 @@ This app is a first-person, 'choose your own adventure' narrative.
 1. The app depicts a series of detailed scenarios. 
 2. Each secnario prompts you to choose an option from a list of actions. 
 3. Your choice dictates how your character proceeds through the story.
+4. You can save a bookmark, quit the app and continue from where you left off at a later time.
 ### **FUNCTIONALITY:**
 ___
 ``` ruby
-require_relative 'list' # providing access to the 'list' file which contains the colorize and ascii art gems, as well as all other pages
+require_relative 'list' # providing access to the 'list' file which contains the colorize and ascii art gems, as well as all other page files
 
-module Page2 #creating first story page file
+module Page2 # creating first story page file
     def self.text #defining a method which provides access to the file's text
 
-a = AsciiArt.new("img/death.png") #calling the ascii gem, linking an image to be converted and assigning it to a variable 'a'
-puts a.to_ascii_art(width: 50) #putting the variable containing the ascii art to the screen and setting a width of 50 pixels
+a = AsciiArt.new("img/death.png") # calling the ascii gem, linking an image to be converted and assigning it to a variable 'a'
+puts a.to_ascii_art(width: 50) # putting the variable containing the ascii art to the screen and setting a width of 50 pixels
 
     puts """
 You sit in the darkness waiting. Surely someone must know about this train wreck and will be coming to the rescue any minute. \n
@@ -35,7 +39,7 @@ The hour passes…\n
 And then hours pass…\n
     """
 
-puts ColorizedString["What would you like to do now? "].colorize(:red) #implementing the colorize gem
+puts ColorizedString["What would you like to do now? "].colorize(:red) # implementing the colorize gem to make the user prompt stand out
         puts """
         1. Bind your head with cloth from your shirt
         2. Call out to whoever is there
@@ -44,9 +48,9 @@ puts ColorizedString["What would you like to do now? "].colorize(:red) #implemen
         """
 
     print "enter choice now: "    
-        choice = gets.chomp.to_i #prompting the user to input an option
+        choice = gets.chomp.to_i # prompting the user to input an option
             if choice == 1
-                puts Page3.text #linking each option to the corresponding story page file, which then displays the text and continues the story
+                puts Page3.text # linking each option to the corresponding story page file, which then displays the next block of text and continues the story
             elsif choice == 2
                 puts Page4.text
             elsif choice == 3
@@ -89,7 +93,7 @@ ___
 ### **ADDITIONAL FUNCTIONALITY ADDED:**
 ___
 #### Invalid Option
-In the case of the user entering a number which is not an option we added the following code:
+In the case of the user entering a number which is not a valid menu option we added the following code:
 ```ruby
 option = nil
     until (option == 0 || option == 1 || option == 2 || option == 3 || option == 4 || option == 5 || option == 6) 
@@ -99,7 +103,7 @@ option = nil
     end
 ```
 #### Save and Exit
-To allow the user to exit the app and add a bookmark, we added the following code to the story page files:
+To allow the user to add a bookmark and exit the app, we added the following code to the story page files:
 ```ruby
 puts ColorizedString["What would you like to do now? "].colorize(:red)
 
@@ -121,7 +125,7 @@ puts ColorizedString["What would you like to do now? "].colorize(:red)
         if option == 0 
         # if the user selects the option to 'save and exit game' they are given their current page number
             puts "your current page number is 2"
-            # the app then terminates because option 0 has no further link
+            # and the app then terminates because option 0 has no further link
         elsif option == 1
             puts Page3.text
         elsif option == 2
@@ -136,7 +140,7 @@ puts ColorizedString["What would you like to do now? "].colorize(:red)
 end
 ```
 
-And the following code to the 'load.rb' file:
+And we added the following code to the 'load.rb' file, which is the page where the user can enter their bookmarked page and continue the story
 
 ```ruby
 require_relative 'pages/list' 
