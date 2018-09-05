@@ -92,7 +92,8 @@ ___
 In the case of the user entering a number which is not an option we added the following code:
 ```ruby
 option = nil
-    until (option == 0 || option == 1 || option == 2 || option == 3 || option == 4 || option == 5 || option == 6) # until loop will print the gets command until the user inputs a relevant option.
+    until (option == 0 || option == 1 || option == 2 || option == 3 || option == 4 || option == 5 || option == 6) 
+    # until loop will print the gets command until the user inputs a relevant option.
     print ColorizedString["Please enter your choice: "].colorize(:red) 
     option = gets.chomp.to_i
     end
@@ -117,7 +118,8 @@ puts ColorizedString["What would you like to do now? "].colorize(:red)
         option = gets.chomp.to_i
         end
     
-        if option == 0 # if the user selects the option to 'save and exit game' they are given their current page number
+        if option == 0 
+        # if the user selects the option to 'save and exit game' they are given their current page number
             puts "your current page number is 2"
             # the app then terminates because option 0 has no further link
         elsif option == 1
@@ -137,7 +139,8 @@ end
 And the following code to the 'load.rb' file:
 
 ```ruby
-require_relative 'pages/list' # providing the path for the 'list' file because it is located in a different folder to the current file 'load'
+require_relative 'pages/list' 
+# providing the path for the 'list' file because it is located in a different folder to the current file 'load'
 
 module Load
     def self.text
