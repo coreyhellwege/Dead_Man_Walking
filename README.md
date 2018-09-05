@@ -63,8 +63,8 @@ ___
 • **ASCII ART** </br>
 This gem converts an image into ASCII format and displays it at the command line.
 
-![ASCII Gem](img/ascii_screenshot.png)
-• **COLORIZE** </br>
+![ASCII Gem](img/ascii_screenshot1.png)
+
 This gem adds methods to set text color, background color and other text effects.
 
 ![COLORIZE Gem](img/ruby_colorize_screenshot.png)
