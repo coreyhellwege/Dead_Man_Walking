@@ -7,7 +7,7 @@ module Page18
     Hey; there ya go! It’s working already. You know something about yourself – that you have a seventy-two hour emergency kit and camping supplies. Focusing on this thought, you get a very hazy snippet of memory – a single moment from a camping trip in Maine with your wife, before the children were born. Here name is Laura; and at least in the memory, you were madly in love with her.
     You try to get more, but your head refuses to give it up and begins to pound in protest. You let it go for now and growl to yourself in frustration."""
 
-    a = AsciiArt.new("img/love.png")
+    a = AsciiArt.new("img/heart.png")
     puts a.to_ascii_art(width: 50)
 
     puts"""
