@@ -1,6 +1,7 @@
 # Choose Your Own Adventure
 ## :skull: Dead Man Walking :scream_cat: 
 </br>
+
 ### **WHY IT EXISTS:**
 ___
 This app provides a fun alternative to reading a traditional fictional story. If the user is bored with the standard format of a novel, this app allows them to directly interact with the story and choose their own ending.
