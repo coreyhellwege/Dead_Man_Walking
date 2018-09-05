@@ -20,30 +20,29 @@ This app is a first-person, 'choose your own adventure' narrative.
 ### **FUNCTIONALITY:**
 ___
 ``` ruby
-require 'colorized_string' #prividing access colorize gem
-require 'asciiart' # providing access to ASCII art gem
-require_relative 'page3' #providing access other story page files
-require_relative 'page4'
-require_relative 'page5'
-require_relative 'page6'
+require_relative 'list' # providing access to the 'list' file which contains the colorize and ascii art gems, as well as all other pages
+
 module Page2 #creating first story page file
     def self.text #defining a method which provides access to the file's text
+
 a = AsciiArt.new("img/death.png") #calling the ascii gem, linking an image to be converted and assigning it to a variable 'a'
 puts a.to_ascii_art(width: 50) #putting the variable containing the ascii art to the screen and setting a width of 50 pixels
+
     puts """
 You sit in the darkness waiting. Surely someone must know about this train wreck and will be coming to the rescue any minute. \n
 The minutes pass…\n
 The hour passes…\n
 And then hours pass…\n
-You have been sitting in the darkness for a long time and are starting to feel weak and dizzy in addition to being in pain. Maybe you should have tried to find help for yourself, rather than sit here, probably bleeding out this whole time. On a side note, whoever is there in the train wreckage still seems to be alive – moaning incoherently from time to time.
-    "
+    """
+
 puts ColorizedString["What would you like to do now? "].colorize(:red) #implementing the colorize gem
         puts """
         1. Bind your head with cloth from your shirt
         2. Call out to whoever is there
         3. Try to sneak toward the person in the wreckage
         4. Ignore the person in the wreckage and climb through the mess to the front of the train
-        "
+        """
+
     print "enter choice now: "    
         choice = gets.chomp.to_i #prompting the user to input an option
             if choice == 1
@@ -62,21 +61,31 @@ end
 ### **GEMS:**
 ___
 • **ASCII ART** </br>
-This gem converts an image into ASCII and displays it at the command line.
+This gem converts an image into ASCII format and displays it at the command line.
+
 ![ASCII Gem](img/ASCII_ScreenShot.png)
 • **COLORIZE** </br>
-This gem adds methods to set text color, background color and text effects.
+This gem adds methods to set text color, background color and other text effects.
+
 ![COLORIZE Gem](img/ruby_colorize_screenshot.png)
+
 ### **PROJECT PLANNING:**
 ___
+**Trello Boards:** </br>
 https://trello.com/b/Nkb1d830
+
+![Trello Screenshot](img/trello_screenshot.png)
+![Slack Screenshot](img/SlackScreenShot5.png)
+
 ### **PROBLEMS WE ENCOUNTERED:**
 ___
 * Missed some 'require relative' declarations
 * Incorrect syntax - naming errors for files and methods
 * Missing 'end' statements in methods
 * Broke strings by accidentally adding/removing quotation marks
+
 ![Error Screenshot](img/error.png)
+
 ### **ADDITIONAL FUNCTIONALITY ADDED:**
 ___
 #### Invalid Option
@@ -89,9 +98,10 @@ option = nil
     end
 ```
 #### Save and Exit
-To allow the user to exit the app and add a bookmark, we added the following code:
+To allow the user to exit the app and add a bookmark, we added the following code to the story page files:
 ```ruby
 puts ColorizedString["What would you like to do now? "].colorize(:red)
+
         # adding an option to save and exit
         puts """
         0. Save and exit game
@@ -99,7 +109,8 @@ puts ColorizedString["What would you like to do now? "].colorize(:red)
         2. Call out to whoever is there
         3. Try to sneak toward the person in the wreckage
         4. Ignore the person in the wreckage and climb through the mess to the front of the train
-        "
+        """
+
         option = nil
         until (option == 0 || option == 1 || option == 2 || option == 3 || option == 4)
         print ColorizedString["Please enter your choice: "].colorize(:red) 
@@ -119,11 +130,15 @@ puts ColorizedString["What would you like to do now? "].colorize(:red)
             puts Page6.text
         else
         end
-end
+    end
 end
 ```
+
+And the following code to the 'load.rb' file:
+
 ```ruby
 require_relative 'pages/list' # providing the path for the 'list' file because it is located in a different folder to the current file 'load'
+
 module Load
     def self.text
         print ColorizedString["Please input your page number: "].colorize(:red)
