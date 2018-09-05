@@ -22,6 +22,7 @@ This app is a first-person, 'choose your own adventure' narrative.
 3. Your choice dictates how your character proceeds through the story.
 4. You can save a bookmark, quit the app and continue from where you left off at a later time.
 ### **FUNCTIONALITY:**
+code sample:
 ___
 ``` ruby
 require_relative 'list' # providing access to the 'list' file which contains the colorize and ascii art gems, as well as all other page files
